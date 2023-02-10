@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="hero is-primary is-fullheight">
+    <div class="container is-fullhd">
+      <div class="notification is-primary">
+        <h1 class="title">Liste des projets</h1>
+          {% for project in object_list %}
+            {% include "includes/project-card.html" with project=project %}
+          {% endfor %}
+      </div>
+    </div>
+</section>
+{% endblock main %}

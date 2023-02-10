@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="hero is-primary is-fullheight">
+    <div class="container is-fullhd">
+      <div class="notification is-primary">
+        <h1 class="title">Liste des Points Kilometriques</h1>
+          {% for point in object_list %}
+            {% include "includes/kilometer-point-card.html" with point=point %}
+          {% endfor %}
+      </div>
+    </div>
+</section>
+{% endblock main %}

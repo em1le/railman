@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="hero is-primary is-fullheight">
+    <div class="container is-fullhd">
+      <div class="notification is-primary">
+        <h1 class="title">Liste des voies</h1>
+          {% for track in object_list %}
+            {% include "includes/track-card.html" with track=track %}
+          <br>
+          {% endfor %}
+      </div>
+    </div>
+</section>
+{% endblock main %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Railman app 👷‍♂️
+      </p>
+      <br>
+      <p class="subtitle">
+        Pour commencer
+        <a class="button is-light is-outlined" href="{% url 'projects-list' %}">Cliquez ici</a>
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock main %}

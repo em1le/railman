@@ -1,18 +1,13 @@
 {% extends "base.html" %}
 
 {% block main %}
-<section class="hero is-primary is-fullheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">
-        Railman app 👷‍♂️
-      </p>
-      <br>
-      <p class="subtitle">
-        Pour commencer
-        <a class="button is-light is-outlined" href="{% url 'projects-list' %}">Cliquez ici</a>
-      </p>
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5">🚂</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Simple preuve de concept.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="{% url 'projects-list' %}">Aller voir les projets</a>
+      </div>
     </div>
   </div>
-</section>
 {% endblock main %}

@@ -1,20 +1,7 @@
-<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      {{ point.name }}
-    </p>
-    <button class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      Projet du port
-    </div>
+<div class="card mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ point.name }}</h5>
+    <p class="card-text">{{ point.description }}</p>
+    <a href="{% url 'points-detail' point.pk %}" class="card-footer-item">Voir</a>
   </div>
-  <footer class="card-footer">
-    <a href="{% url 'tracks-list' %}" class="card-footer-item">Voir</a>
-  </footer>
 </div>

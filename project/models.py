@@ -7,6 +7,12 @@ class Project(models.Model):
         verbose_name="Nom du projet"
     )
 
+    description = models.CharField(
+        max_length=140,
+        verbose_name="Description du projet",
+        default=""
+    )
+
     def __str__(self) -> str:
         return f"{self.name} | ID : {self.id}"
 
@@ -19,6 +25,12 @@ class Route(models.Model):
     name = models.CharField(
         max_length=32,
         verbose_name="Nom du trajet"
+    )
+
+    description = models.CharField(
+        max_length=140,
+        verbose_name="Description du trajet",
+        default=""
     )
 
     projects = models.ForeignKey(
@@ -41,6 +53,12 @@ class Track(models.Model):
         verbose_name="Nom de la voie"
     )
 
+    description = models.CharField(
+        max_length=140,
+        verbose_name="Description de la voie",
+        default=""
+    )
+
     routes = models.ManyToManyField(
         "project.Route",
         verbose_name="Route liée"
@@ -60,6 +78,12 @@ class KilometerPoint(models.Model):
         verbose_name="Nom du Point Kilometrique"
     )
 
+    description = models.CharField(
+        max_length=140,
+        verbose_name="Description du Point Kilometrique",
+        default=""
+    )
+
     tracks = models.ForeignKey(
         "project.Track",
         on_delete=models.CASCADE,
@@ -70,6 +94,6 @@ class KilometerPoint(models.Model):
         return f"{self.name} | ID : {self.id}"
 
     class Meta:
-        verbose_name = "Point kilometrique"
-        verbose_name_plural = "Points kilometriques"
+        verbose_name = "Point Kilometrique"
+        verbose_name_plural = "Points Kilometriques"
 

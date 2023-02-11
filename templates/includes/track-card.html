@@ -1,22 +1,8 @@
-<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      {{ track.name }}
-    </p>
-    <button class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      Voie du Nord
-      <br>
-      Nombre de PK : {{ track.kilometerpoint_set.count }}
-    </div>
+<div class="card mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ track.name }}</h5>
+    <p class="card-text">{{ track.description }}</p>
+    <p class="card-text">Nombre de PK : {{ track.kilometerpoint_set.count }}</p>
+    <a href="{% url 'points-list' %}" class="card-footer-item">Voir</a>
   </div>
-  <footer class="card-footer">
-    <a href="{% url 'tracks-list' %}" class="card-footer-item">Voir</a>
-  </footer>
 </div>

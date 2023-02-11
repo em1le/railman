@@ -4,8 +4,8 @@
 <ul class="nav nav-pills">
   <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Accueil</a></li>
   <li class="nav-item"><a href="{% url 'projects-list' %}" class="nav-link">Projets</a></li>
-  <li class="nav-item"><a href="{% url 'routes-list' %}" class="nav-link">Trajets</a></li>
-    <li class="nav-item"><a href="{% url 'tracks-list' %}" class="nav-link active" aria-current="page">Voies</a></li>
+  <li class="nav-item"><a href="{% url 'routes-list' %}" class="nav-link active" aria-current="page">Trajets</a></li>
+    <li class="nav-item"><a href="{% url 'tracks-list' %}" class="nav-link">Voies</a></li>
 </ul>
 {% endblock header %}
 
@@ -13,9 +13,9 @@
 <div class="container-lg">
 <h1 class="title">Liste des Trajets</h1>
 <div class="row align-items-start">
-  {% for track in object_list %}
+  {% for route in object_list %}
     <div class="col-3">
-      {% include "includes/track-card.html" with track=track %}
+      {% include "includes/route-card.html" with route=route %}
     </div>
   {% endfor %}
 </div>

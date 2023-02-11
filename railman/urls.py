@@ -22,4 +22,5 @@ urlpatterns = [
     path("projects/", include("project.urls.projects")),
     path("tracks/", include("project.urls.tracks")),
     path("points/", include("project.urls.points")),
+    path("routes/", include("project.urls.routes")),
 ]

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block header %}
+<ul class="nav nav-pills">
+  <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Accueil</a></li>
+  <li class="nav-item"><a href="{% url 'projects-list' %}" class="nav-link">Projets</a></li>
+  <li class="nav-item"><a href="{% url 'routes-list' %}" class="nav-link">Trajets</a></li>
+  <li class="nav-item"><a href="{% url 'tracks-list' %}" class="nav-link">Voies</a></li>
+  <li class="nav-item"><a href="{% url 'points-list' %}" class="nav-link active" aria-current="page">PK</a></li>
+</ul>
+{% endblock header %}
+
+{% block main %}
+<div class="container-fluid">
+  {% with point=object %}
+    <h2 class="title">{{ point.name }}</h2>
+    <div class="row align-items-start">
+      <div class="col-4">
+        <h3>Passés</h3>
+        {% for past_event in past_events %}
+          {% include 'includes/event-card.html' with event=past_event %}
+        {% endfor %}
+      </div>
+      <div class="col-4">
+        <h3>En cours</h3>
+        {% for present_event in present_events %}
+          {% include 'includes/event-card.html' with event=present_event %}
+        {% endfor %}
+      </div>
+      <div class="col-4">
+        <h3>Futurs</h3>
+        {% for future_event in future_events %}
+          {% include 'includes/event-card.html' with event=future_event %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endwith %}
+</div>
+{% endblock main %}

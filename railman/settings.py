@@ -146,3 +146,10 @@ STATIC_ROOT = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Default super user
+DJANGO_SUPERUSER_EMAIL = env.str("DJANGO_SUPERUSER_EMAIL")
+
+DJANGO_SUPERUSER_USERNAME = env.str("DJANGO_SUPERUSER_USERNAME")
+
+DJANGO_SUPERUSER_PASSWORD = env.str("DJANGO_SUPERUSER_PASSWORD")

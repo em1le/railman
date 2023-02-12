@@ -32,12 +32,10 @@ DEBUG = env.bool("DEBUG", default=False)
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost", "railman.fly.dev"]
 ALLOWED_HOSTS = ["*"]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://railman.fly.dev",
-#     "http://railman.fly.dev",
-#     "railman.fly.dev",
-#     "www.railman.fly.dev",
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://ancient-pond-3732.fly.dev",
+    "http://ancient-pond-3732.fly.dev",
+]
 
 # Application definition
 

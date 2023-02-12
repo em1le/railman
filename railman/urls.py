@@ -18,6 +18,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+
+admin.AdminSite.site_header = "Administration de Railman"
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("project.urls.main")),

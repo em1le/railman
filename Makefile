@@ -6,3 +6,6 @@ migrate:
 
 makemigrations:
 	python manage.py makemigrations
+
+check:
+	python manage.py check
